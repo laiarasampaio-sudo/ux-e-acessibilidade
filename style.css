@@ -1,21 +1,160 @@
-body{background-color: rgb(238, 223, 243);
-    font-family: "Nunito Sans" ;
-display: flex;
-flex-direction: column;
-align-items:start;
-font-size: 20px;
-margin: 50 px;}
-
-
-h1{
-    color: blue; text-align: center; font-size: 38px; font-family: "Paytone One";
+:root {
+    --primary-color: #2b3a8c;
+    --secondary-color: #7b2cbf;
+    --background-color: #f4effa;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --accent-color: #0077b6;
+    --border-radius: 12px;
 }
 
-
-h2{
-    color: rgb(247, 0, 255); text-align:right; font-size: 30px; font-family: "Paytone One";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: var(--background-color);
+    font-family: "Nunito", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 40px 20px;
+}
 
-div{display:list-item}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
 
+.hero h1 {
+    font-family: "Paytone One", sans-serif;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.biografia p {
+    margin-bottom: 15px;
+}
+
+.biografia .destaque {
+    background-color: #f0e6ff;
+    padding: 15px 20px;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #e0d5ed;
+    margin: 35px 0;
+}
+
+h2 {
+    font-family: "Paytone One", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.glossario-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .glossario-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background: #faf8fc;
+    border: 1px solid #ebdcf7;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(123, 44, 191, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+}
+
+.link-fonte {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+.link-fonte:hover {
+    text-decoration: underline;
+}
+
+.cta-container {
+    margin: 20px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5a189a;
+}
+
+.video-descricao {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
